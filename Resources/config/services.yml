@@ -1,0 +1,7 @@
+parameters:
+  gizlab.uploader.settings: ~
+
+services:
+  gizlab.uploader_service:
+    class: Gizlab\Bundle\UploaderBundle\Service\UploaderService
+    arguments: [ "@doctrine.orm.entity_manager", "%kernel.cache_dir%", "%kernel.root_dir%", "%gizlab.uploader.settings%" ]
